@@ -11,10 +11,10 @@ export default function ProductsPage() {
     <div className="px-8 py-12">
       <h1 className="font-heading text-4xl mb-6">Products</h1>
 
-      {/* CATEGORY FILTER */}
+
       <CategoryList selected={category} onSelect={setCategory} />
 
-      {/* PRODUCT GRID */}
+
       <ProductList category={category} />
     </div>
   );

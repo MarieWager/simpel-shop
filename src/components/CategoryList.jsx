@@ -28,8 +28,8 @@ export default function CategoryList({ selected, onSelect }) {
           px-4 py-1.5 rounded-full text-sm font-medium transition capitalize
           ${
             selected === "all"
-              ? "bg-white text-black border border-[#F5BD19] shadow-sm"
-              : "bg-[#FBF7F0] text-gray-700 border border-[#F5BD19] hover:bg-[#F3EFEA]"
+              ? "bg-white text-black border-2 border-[#F5BD19] shadow-sm"
+              : "bg-[#FBF7F0] text-gray-600 border border-[#94855a] hover:bg-[#F3EFEA]"
           }
         `}
       >
@@ -51,8 +51,8 @@ export default function CategoryList({ selected, onSelect }) {
               px-4 py-1.5 rounded-full text-sm font-medium transition capitalize
               ${
                 selected === name
-                  ? "bg-white text-black border border-[#F5BD19] shadow-sm"
-                  : "bg-[#FBF7F0] text-gray-700 border border-[#F5BD19] hover:bg-[#F3EFEA]"
+                  ? "bg-white text-black border-2 border-[#F5BD19] shadow-sm"
+                  : "bg-[#FBF7F0] text-gray-700 border border-[#d7b44b] hover:bg-[#F3EFEA]"
               }
             `}
           >
