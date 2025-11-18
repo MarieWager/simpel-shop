@@ -25,6 +25,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${gabarito.variable} ${inter.variable} font-body bg-[#FBF7F0] text-gray-900`}
 >
+        <Header></Header>
+
 
         <main className="min-h-screen">{children}</main>
     
