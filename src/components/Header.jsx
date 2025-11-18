@@ -17,7 +17,7 @@ const Header = () => {
                     <h2 className="cursor-pointer hover:text-[var(--yellow)]">Products</h2>
                 </Link>
             </nav>
-            <section className='cursor-pointer flex justify-self-end items-center gap-3 pr-[2vw] md:pr-[4vw] lg:pr-[5vw] text-black'>
+            <section className='cursor-pointer flex justify-self-end items-center gap-3 pr-10 text-black'>
                 <Search className="hover:text-black/30" />
                 <Heart className="hover:fill-black/30" fill="black" stroke="black" />
                 <ShoppingBasket className="hover:text-black/30" />
