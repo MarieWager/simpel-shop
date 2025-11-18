@@ -7,9 +7,9 @@ import { Search, Heart, ShoppingBasket } from "lucide-react";
 
 const Header = () => {
     return ( 
-        <article className='bg-[var(--green)] grid grid-cols-[1fr_auto_1fr] p-3'>
+        <article className='bg-[var(--green)] grid grid-cols-[1fr_auto_1fr] p-5'>
             <div></div>
-            <nav className='text-white flex justify-center gap-100'>
+            <nav className='text-white text-xl flex justify-center gap-[5vw] md:gap-[20vw] lg:gap-[25vw]'>
                 <Link href="/">
                     <h2 className="cursor-pointer hover:text-[var(--yellow)]">Home</h2>
                 </Link>                

@@ -45,7 +45,7 @@ export default function ProductPage({ params }) {
   }
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto py-12 px-8 min-h-screen">
 
 
    <div className="flex items-center justify-between mb-6">
