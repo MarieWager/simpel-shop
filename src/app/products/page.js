@@ -8,7 +8,8 @@ export default function ProductsPage() {
   const [category, setCategory] = useState("all");
 
   return (
-    <div className="px-8 py-12">
+    <div className="">
+
       <h1 className="font-heading text-4xl mb-6">Products</h1>
 
 

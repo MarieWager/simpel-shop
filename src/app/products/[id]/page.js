@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState, use } from "react";
 import Image from "next/image";
 import Button from "@/components/Button";
@@ -46,7 +45,8 @@ export default function ProductPage({ params }) {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
+    <div className="max-w-6xl mx-auto">
+
 
    <div className="flex items-center justify-between mb-6">
   
