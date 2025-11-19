@@ -55,6 +55,9 @@ export default function ProductList({ category }) {
             <h2 className="font-heading text-base mt-3">{product.title}</h2>
             <p className="font-body text-sm text-gray-600">{product.brand}</p>
             <p className="font-body text-sm text-gray-500">{product.category}</p>
+            <p className="font-heading text-lg font-semibold mt-2">
+              ${product.price}
+            </p>
           </Link>
         ))}
       </div>
