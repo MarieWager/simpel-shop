@@ -56,7 +56,7 @@ const BasketPopUp = ({ isOpen, onClose }) => {
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40" onClick={onClose} />
       )}
 
-      <section className={`grid grid-cols-1 grid-rows-auto gap-3 fixed top-0 right-0 h-full w-[90%] sm:w-[400px] bg-[var(--beige)] shadow-xl z-50 overflow-y-auto transition-transform duration-200 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+      <section className={`grid grid-cols-1 grid-rows-auto gap-3 fixed top-0 right-0 h-full w-[90%] sm:w-[400px] bg-[#FBF7F0] shadow-xl z-50 overflow-y-auto transition-transform duration-200 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
        
         <main className="p-5 max-h-full overflow-y-auto">
         <button onClick={onClose} className="cursor-pointer flex text-gray-500 hover:text-gray-700 justify-self-end">
