@@ -42,6 +42,24 @@ export default function ProductList({ category }) {
     }
   }
 
+  // ADD TO CART
+  const addToCart = (product) => {
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    const existing = cart.find(item => item.id === product.id);
+
+    if (existing) {
+      existing.amount = (existing.amount || 1) + 1;
+    } else {
+      cart.push({ id: product.id, price: product.price, amount: 1 });
+      }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+  {/* opdatere BasketPopUp om evt ændring */}
+    window.dispatchEvent(new Event("cartUpdated"));
+  };
+
+
   // NORMAL PRODUCT LOAD
   useEffect(() => {
     if (searchTerm.length > 0) return;
@@ -107,7 +125,9 @@ export default function ProductList({ category }) {
       {/* PRODUCT GRID */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <div key={product.id} className="relative">
+
+           /* PRODUCT CARD */
+          <div key={product.id} className="relative grid grid-rows-[1fr_auto] bg-white rounded-3xl shadow p-4 hover:scale-[1.02] transition-transform block">
 
             {/* ❤️ FAVORITE BUTTON */}
             <button
@@ -125,12 +145,9 @@ export default function ProductList({ category }) {
               />
             </button>
 
-            {/* PRODUCT CARD */}
-            <Link
-              href={`/products/${product.id}`}
-              className="bg-white rounded-3xl shadow p-4 hover:scale-[1.02] transition-transform block"
-            >
-              <div className="relative w-full h-40 rounded-2xl overflow-hidden">
+            {/* PRODUCT CONTENT */}
+            <Link href={`/products/${product.id}`} className="grid grid-rows-[auto_1fr_auto_auto] gap-2"> 
+              <div className="relative w-full h-40 rounded-2xl overflow-hidden row-start-1 row-end-2">
                 <Image
                   src={product.thumbnail}
                   alt={product.title}
@@ -139,11 +156,19 @@ export default function ProductList({ category }) {
                 />
               </div>
 
-              <h2 className="font-heading text-base mt-3">{product.title}</h2>
-              <p className="text-sm text-gray-600">{product.brand}</p>
-              <p className="text-sm text-gray-500">{product.category}</p>
-              <p className="text-lg font-semibold mt-2">${product.price}</p>
+              <h2 className="font-heading text-base row-start-2 row-end-3">{product.title}</h2>
+              <p className="text-sm text-gray-600 row-start-3 row-end-4">{product.brand}</p>
+              <p className="text-sm text-gray-500 row-start-4 row-end-5">{product.category}</p>
+              <p className="text-lg font-semibold mt-2 row-start-5 row-end-6">${product.price}</p>
             </Link>
+
+            <Button className="!w-full !h-fit mt-3 !p-1"
+              onClick={(e) => {e.preventDefault();
+              addToCart(product);
+              }}>
+                ADD
+            </Button>
+              
           </div>
         ))}
       </div>

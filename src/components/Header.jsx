@@ -61,7 +61,7 @@ const loadCount = () => {
                 <div className="grid grid-cols-1 grid-rows-1">
                     <ShoppingBasket onClick={() => setIsOpen(true)} className="hover:text-black/30 col-span-full row-span-full"/>
 
-                    <figure className='rounded-full w-4 h-4 bg-[var(--yellow)] flex items-end justify-center justify-self-end text-black text-[10px] pr-[1px] col-start-1 col-end-2 row-start-1 row-end-2 translate-y-[-9px] translate-x-[9px]'>{count}</figure>
+                    <figure className='rounded-full w-4 h-4 bg-[var(--yellow)] flex items-end justify-center justify-self-end text-black text-[10px] col-start-1 col-end-2 row-start-1 row-end-2 translate-y-[-9px] translate-x-[9px]'>{count}</figure>
                 </div>
             </section>
         </article>

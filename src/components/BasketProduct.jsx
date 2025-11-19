@@ -136,12 +136,12 @@ const BasketProduct = ({id, onRemove}) => {
 
         <section className="grid grid-cols-[auto_auto] col-start-2 col-end-3">
           <div className="flex flex-row gap-3 items-center self-end">
-            <button onClick={decrement} className="border rounded-full hover:bg-black/30 w-6.5 h-6 pb-6">-</button>
+            <button onClick={decrement} className="cursor-pointer border rounded-full hover:bg-black/30 w-6.5 h-6 pb-6">-</button>
             <p className="text-sm">{amount}</p>
-            <button onClick={increment} className="border rounded-full hover:bg-black/30 w-6.5 h-6 pb-6">+</button>
+            <button onClick={increment} className="cursor-pointer border rounded-full hover:bg-black/30 w-6.5 h-6 pb-6">+</button>
           </div>
 
-          <button onClick={handleRemove} className="place-self-end">
+          <button onClick={handleRemove} className="cursor-pointer place-self-end">
             <Trash className="fill-black/30 hover:fill-black/70 stroke-black" />
           </button>
         </section>

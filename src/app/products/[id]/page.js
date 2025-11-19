@@ -33,9 +33,8 @@ export default function ProductPage({ params }) {
     localStorage.setItem(`fav-${id}`, next);
   };
 
-  const addToCart = () => {
+  const addToCart = (product) => {
     const cart = JSON.parse(localStorage.getItem("cart") || "[]");
-
     const existing = cart.find(item => item.id === product.id);
 
     if (existing) {
@@ -119,11 +118,7 @@ export default function ProductPage({ params }) {
             {product.description}
           </p>
 
-          <Button
-            variant="primary"
-            className="w-full mt-19"
-            onClick={addToCart}
-          >
+          <Button variant="primary" className="w-full mt-19" onClick={addToCart}>
             ADD TO CART
           </Button>
 

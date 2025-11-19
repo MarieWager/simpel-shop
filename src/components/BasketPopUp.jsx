@@ -81,7 +81,7 @@ const BasketPopUp = ({ isOpen, onClose }) => {
               <p>SUBTOTAL</p>
               <b>${subtotal.toFixed(2)}</b>
             </div>
-            <Button className="w-fit justify-self-center">CHECKOUT</Button>
+            <Button className="w-fit justify-self-center !cursor-not-allowed">CHECKOUT</Button>
         </article>
 
       </section>
