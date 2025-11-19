@@ -38,14 +38,12 @@ export default function ProductPage({ params }) {
 
     const existing = cart.find(item => item.id === product.id);
 
-    if (existing) {
-      existing.amount += 1;
+   if (existing) {
+      // produkt findes -> øg amount
+      existing.amount = (existing.amount || 1) + 1;
     } else {
-      cart.push({
-        id: product.id,
-        price: product.price,
-        amount: 1
-      });
+      // produkt findes ikke -> tilføj det
+      cart.push({ id, amount: 1 });
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
